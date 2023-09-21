@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .app{
-    @apply flex items-center;
+    @apply flex flex-row items-center;
 }
