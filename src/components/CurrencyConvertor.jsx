@@ -23,21 +23,21 @@ const CurrencyConvertor = () => {
               to_currency: chosenSecondaryCurrency
             },
             headers: {
-              'X-RapidAPI-Key': 'dc8789878fmshf6940005002c4a0p184889jsne60aba9a044b',
+              'X-RapidAPI-Key': import.meta.env.VITE_CRYPTO_APIKEY,
               'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
             }
           };
           
           try {
               const response = await axios.request(options);
-              console.log(response.data['Realtime Currency Exchange Rate']['Exchange Rate'])
+            //   console.log(response.data['Realtime Currency Exchange Rate']['Exchange Rate'])
               setExchangeRate(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'])
               setResult(response.data['Realtime Currency Exchange Rate']['5. Exchange Rate'] * amount)
           } catch (error) {
               console.error(error);
           }
     };
-    console.log(exchangeRate);
+    // console.log(exchangeRate);
 
     return (
         <div>
