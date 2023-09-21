@@ -6,8 +6,8 @@ const App = () => {
   return (
     <>
     <div className="app">
-    <CurrencyConvertor />
-    <NewsFeed />
+      <CurrencyConvertor />
+      <NewsFeed />
     </div>
     </>
   )
